@@ -1,13 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useRef } from "react";
+import React from "react";
 import Emotion from "../components/Emotion";
 import Intro from "../components/Intro";
-import { useIntersection } from "../hooks/UseIntersection";
 
 const Homepage = () => {
-  const [isIntersecting, ref] = useIntersection();
   return (
-    <div ref={ref}>
+    <div>
       <div className="relative flex flex-col h-screen text-white bg-black lg:flex-row">
         <div className="lg:h-screen lg:w-[150px] bg-black z-20 flex flex-col lg:items-center lg:p-8 p-4 relative">
           <div className="cursor-pointer lg:mt-8">
@@ -48,7 +46,7 @@ const Homepage = () => {
         <div className="absolute top-0 z-10 w-screen h-screen bg-black opacity-50"></div>
       </div>
       <div className="w-full h-[500px] bg-black"></div>
-      <Intro inViewport={isIntersecting ? true : false} />
+      <Intro />
     </div>
   );
 };
