@@ -16,7 +16,7 @@ const Loader = () => {
     gsap.fromTo(
       [red.current, green.current],
       { y: -18 },
-      { y: 18, repeat: -1, yoyo: true, duration: 0.5, ease: "power3.inOut" }
+      { y: 18, yoyo: true, repeat: -1, duration: 0.5, ease: "power3.inOut" }
     );
   }, []);
 
